@@ -9,19 +9,27 @@
 /* Begin PBXBuildFile section */
 		FAD004302A5197B400E013D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD0042F2A5197B400E013D1 /* AppDelegate.swift */; };
 		FAD004322A5197B400E013D1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD004312A5197B400E013D1 /* SceneDelegate.swift */; };
-		FAD004342A5197B400E013D1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD004332A5197B400E013D1 /* ViewController.swift */; };
 		FAD004392A5197B800E013D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAD004382A5197B800E013D1 /* Assets.xcassets */; };
 		FAD0043C2A5197B800E013D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAD0043A2A5197B800E013D1 /* LaunchScreen.storyboard */; };
+		FAD0044B2A51A30500E013D1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD0044A2A51A30500E013D1 /* HomeViewController.swift */; };
+		FAD0044D2A51A45500E013D1 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD0044C2A51A45500E013D1 /* NetworkManager.swift */; };
+		FAD0044F2A51DA0000E013D1 /* Movies.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD0044E2A51DA0000E013D1 /* Movies.swift */; };
+		FAD004512A51F4C400E013D1 /* MovieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD004502A51F4C400E013D1 /* MovieService.swift */; };
+		FAD004532A52096E00E013D1 /* APIURLS.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD004522A52096E00E013D1 /* APIURLS.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FAD0042C2A5197B400E013D1 /* Example-MVVM-APP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Example-MVVM-APP.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAD0042F2A5197B400E013D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAD004312A5197B400E013D1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FAD004332A5197B400E013D1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FAD004382A5197B800E013D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FAD0043B2A5197B800E013D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FAD0043D2A5197B800E013D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAD0044A2A51A30500E013D1 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		FAD0044C2A51A45500E013D1 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		FAD0044E2A51DA0000E013D1 /* Movies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movies.swift; sourceTree = "<group>"; };
+		FAD004502A51F4C400E013D1 /* MovieService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieService.swift; sourceTree = "<group>"; };
+		FAD004522A52096E00E013D1 /* APIURLS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIURLS.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +62,66 @@
 		FAD0042E2A5197B400E013D1 /* Example-MVVM-APP */ = {
 			isa = PBXGroup;
 			children = (
+				FAD004442A51A26400E013D1 /* Services */,
+				FAD004462A51A27E00E013D1 /* Models */,
+				FAD004472A51A28900E013D1 /* Core */,
+				FAD004432A51A13800E013D1 /* Utilities */,
 				FAD0042F2A5197B400E013D1 /* AppDelegate.swift */,
 				FAD004312A5197B400E013D1 /* SceneDelegate.swift */,
-				FAD004332A5197B400E013D1 /* ViewController.swift */,
 				FAD004382A5197B800E013D1 /* Assets.xcassets */,
 				FAD0043A2A5197B800E013D1 /* LaunchScreen.storyboard */,
 				FAD0043D2A5197B800E013D1 /* Info.plist */,
 			);
 			path = "Example-MVVM-APP";
+			sourceTree = "<group>";
+		};
+		FAD004432A51A13800E013D1 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				FAD0044C2A51A45500E013D1 /* NetworkManager.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		FAD004442A51A26400E013D1 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FAD004502A51F4C400E013D1 /* MovieService.swift */,
+				FAD004522A52096E00E013D1 /* APIURLS.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		FAD004462A51A27E00E013D1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FAD0044E2A51DA0000E013D1 /* Movies.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FAD004472A51A28900E013D1 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				FAD004492A51A29D00E013D1 /* Components */,
+				FAD004482A51A29200E013D1 /* HomeViewController */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		FAD004482A51A29200E013D1 /* HomeViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FAD0044A2A51A30500E013D1 /* HomeViewController.swift */,
+			);
+			path = HomeViewController;
+			sourceTree = "<group>";
+		};
+		FAD004492A51A29D00E013D1 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,9 +194,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAD004342A5197B400E013D1 /* ViewController.swift in Sources */,
+				FAD004512A51F4C400E013D1 /* MovieService.swift in Sources */,
+				FAD0044F2A51DA0000E013D1 /* Movies.swift in Sources */,
+				FAD004532A52096E00E013D1 /* APIURLS.swift in Sources */,
+				FAD0044D2A51A45500E013D1 /* NetworkManager.swift in Sources */,
 				FAD004302A5197B400E013D1 /* AppDelegate.swift in Sources */,
 				FAD004322A5197B400E013D1 /* SceneDelegate.swift in Sources */,
+				FAD0044B2A51A30500E013D1 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
