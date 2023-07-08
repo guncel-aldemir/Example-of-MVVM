@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA5CFBB92A5999C20045D007 /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5CFBB82A5999C20045D007 /* UIHelper.swift */; };
+		FA5CFBBB2A59A8600045D007 /* CGFloat+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5CFBBA2A59A8600045D007 /* CGFloat+Ext.swift */; };
+		FA5CFBBE2A59B9670045D007 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5CFBBD2A59B9670045D007 /* MovieCell.swift */; };
+		FAA756622A576528009C1975 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA756612A576528009C1975 /* UIView+Ext.swift */; };
+		FAB4930A2A55EFE200E3A7F2 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB493092A55EFE200E3A7F2 /* HomeViewModel.swift */; };
 		FAD004302A5197B400E013D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD0042F2A5197B400E013D1 /* AppDelegate.swift */; };
 		FAD004322A5197B400E013D1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD004312A5197B400E013D1 /* SceneDelegate.swift */; };
 		FAD004392A5197B800E013D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAD004382A5197B800E013D1 /* Assets.xcassets */; };
@@ -19,6 +24,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA5CFBB82A5999C20045D007 /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
+		FA5CFBBA2A59A8600045D007 /* CGFloat+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Ext.swift"; sourceTree = "<group>"; };
+		FA5CFBBD2A59B9670045D007 /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
+		FAA756612A576528009C1975 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
+		FAB493092A55EFE200E3A7F2 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		FAD0042C2A5197B400E013D1 /* Example-MVVM-APP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Example-MVVM-APP.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAD0042F2A5197B400E013D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAD004312A5197B400E013D1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +53,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FAA756602A576505009C1975 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FAA756612A576528009C1975 /* UIView+Ext.swift */,
+				FA5CFBB82A5999C20045D007 /* UIHelper.swift */,
+				FA5CFBBA2A59A8600045D007 /* CGFloat+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		FAD004232A5197B400E013D1 = {
 			isa = PBXGroup;
 			children = (
@@ -62,6 +82,7 @@
 		FAD0042E2A5197B400E013D1 /* Example-MVVM-APP */ = {
 			isa = PBXGroup;
 			children = (
+				FAA756602A576505009C1975 /* Extensions */,
 				FAD004442A51A26400E013D1 /* Services */,
 				FAD004462A51A27E00E013D1 /* Models */,
 				FAD004472A51A28900E013D1 /* Core */,
@@ -113,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				FAD0044A2A51A30500E013D1 /* HomeViewController.swift */,
+				FAB493092A55EFE200E3A7F2 /* HomeViewModel.swift */,
 			);
 			path = HomeViewController;
 			sourceTree = "<group>";
@@ -120,6 +142,7 @@
 		FAD004492A51A29D00E013D1 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				FA5CFBBD2A59B9670045D007 /* MovieCell.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -196,8 +219,13 @@
 			files = (
 				FAD004512A51F4C400E013D1 /* MovieService.swift in Sources */,
 				FAD0044F2A51DA0000E013D1 /* Movies.swift in Sources */,
+				FA5CFBBE2A59B9670045D007 /* MovieCell.swift in Sources */,
+				FA5CFBBB2A59A8600045D007 /* CGFloat+Ext.swift in Sources */,
 				FAD004532A52096E00E013D1 /* APIURLS.swift in Sources */,
+				FA5CFBB92A5999C20045D007 /* UIHelper.swift in Sources */,
+				FAB4930A2A55EFE200E3A7F2 /* HomeViewModel.swift in Sources */,
 				FAD0044D2A51A45500E013D1 /* NetworkManager.swift in Sources */,
+				FAA756622A576528009C1975 /* UIView+Ext.swift in Sources */,
 				FAD004302A5197B400E013D1 /* AppDelegate.swift in Sources */,
 				FAD004322A5197B400E013D1 /* SceneDelegate.swift in Sources */,
 				FAD0044B2A51A30500E013D1 /* HomeViewController.swift in Sources */,

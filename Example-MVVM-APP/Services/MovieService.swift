@@ -16,7 +16,9 @@ class MovieService {
         NetworkManager.shared.download(url: url) { [weak self] result in
             guard let self = self else{return}
             switch result {
-                
+                /*
+                 switch ifadesinde result değeri kontrol edilirken, Result türündeki dönüş değerini desen eşleme (pattern matching) yapısı kullanarak işlenir. Bu desen eşleme yapısı, result değerinin .success durumunda veri (data) içerdiğini ve .failure durumunda hata (error) içerdiğini kontrol eder.
+                 */
             case .success(let data):
                completion(self.handleWithSuccess(data: data))
             case .failure(let error):
