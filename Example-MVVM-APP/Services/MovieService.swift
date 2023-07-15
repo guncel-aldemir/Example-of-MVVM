@@ -12,10 +12,13 @@ class MovieService {
     
     
     func downloadMovies(completion: @escaping ([MovieResult]?) -> ()){
+       
         guard let url = URL(string: APIURLS.movies(page: 1)) else{return}
-        NetworkManager.shared.download(url: url) { [weak self] result in
+  
+        NetworkManager.shared.download(url:url) { [weak self] results in
             guard let self = self else{return}
-            switch result {
+          
+            switch results {
                 /*
                  switch ifadesinde result değeri kontrol edilirken, Result türündeki dönüş değerini desen eşleme (pattern matching) yapısı kullanarak işlenir. Bu desen eşleme yapısı, result değerinin .success durumunda veri (data) içerdiğini ve .failure durumunda hata (error) içerdiğini kontrol eder.
                  */
@@ -32,13 +35,14 @@ class MovieService {
     }
     private func handleWithSuccess(data:Data) -> [MovieResult]? {
         do {
+           
             let moviesList = try JSONDecoder().decode(Movies.self, from: data)
-    
+            print(moviesList)
                 return moviesList.results
-       
+          
         }
         catch{
-            print(error)
+            print("data boş")
             return nil
         }
     }

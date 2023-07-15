@@ -16,7 +16,7 @@ struct Movies: Decodable{
     
     enum CodingKeys: String, CodingKey {
 
-      case page
+        case page
         case results
         case totalPages = "total_pages"
         case totalResults = "total_results"
@@ -30,5 +30,11 @@ struct MovieResult: Decodable {
     enum CodingKeys: String, CodingKey {
         case id
         case posterPath = "poster_path"
+    }
+    var _id:Int {
+        id ?? Int.min
+    }
+    var _posterPath:String {
+        posterPath ?? ""
     }
 }

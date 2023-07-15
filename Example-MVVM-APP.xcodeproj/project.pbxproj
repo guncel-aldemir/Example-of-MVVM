@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA180A682A633A940037D607 /* MoviesImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA180A672A633A940037D607 /* MoviesImageView.swift */; };
 		FA5CFBB92A5999C20045D007 /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5CFBB82A5999C20045D007 /* UIHelper.swift */; };
 		FA5CFBBB2A59A8600045D007 /* CGFloat+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5CFBBA2A59A8600045D007 /* CGFloat+Ext.swift */; };
 		FA5CFBBE2A59B9670045D007 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5CFBBD2A59B9670045D007 /* MovieCell.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA180A672A633A940037D607 /* MoviesImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesImageView.swift; sourceTree = "<group>"; };
 		FA5CFBB82A5999C20045D007 /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
 		FA5CFBBA2A59A8600045D007 /* CGFloat+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Ext.swift"; sourceTree = "<group>"; };
 		FA5CFBBD2A59B9670045D007 /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				FA5CFBBD2A59B9670045D007 /* MovieCell.swift */,
+				FA180A672A633A940037D607 /* MoviesImageView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA180A682A633A940037D607 /* MoviesImageView.swift in Sources */,
 				FAD004512A51F4C400E013D1 /* MovieService.swift in Sources */,
 				FAD0044F2A51DA0000E013D1 /* Movies.swift in Sources */,
 				FA5CFBBE2A59B9670045D007 /* MovieCell.swift in Sources */,

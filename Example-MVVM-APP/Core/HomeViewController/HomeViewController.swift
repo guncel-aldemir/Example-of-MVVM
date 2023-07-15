@@ -26,10 +26,13 @@ final class HomeViewController: UIViewController {
        
         viewModel.viewDidLoad()
         
+        
+        
     }
     
     
 }
+
 extension HomeViewController: HomeViewControllerProtocol{
     
     func configureVC() {
@@ -37,18 +40,23 @@ extension HomeViewController: HomeViewControllerProtocol{
 
         
     }
+    // MARK: - Collection
     func configureCollectionView() {
         collectionView = UICollectionView(frame: .zero, collectionViewLayout: UIHelper.createHomeFlowLayout())
         
         view.addSubview(collectionView)
         
-        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        // MARK: - Delegate-datasource
+        
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(MovieCell.self, forCellWithReuseIdentifier: MovieCell.reuseId)
         
+        
+        // MARK: - Layout
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.pinToEdgesOf(view: view)
-       
+        collectionView.backgroundColor = .systemBackground
         
     }
     
@@ -59,10 +67,11 @@ extension HomeViewController: HomeViewControllerProtocol{
 extension HomeViewController:UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        viewModel.moviesLists.count
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MovieCell.reuseId, for: indexPath) as! MovieCell
+        cell.setCell(moviePicture: viewModel.moviesLists[indexPath.item])
         return cell
     }
   

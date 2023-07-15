@@ -6,11 +6,13 @@
 //
 
 import Foundation
+/*
 enum NetworkError: Error {
     case serverError
     case invalidURL
     case emptyResponse
 }
+ */
 class NetworkManager {
     static let shared = NetworkManager()
     private init(){
@@ -18,28 +20,39 @@ class NetworkManager {
     }
     
     func download(url: URL, completion: @escaping (Result<Data, Error>) -> ()) {
-        URLSession.shared.dataTask(with:url) { data, response, error in
+        
+     
+        URLSession.shared.dataTask(with: url) { data, response, error in
             
             if let error = error {
                 print(error.localizedDescription)
                 completion(.failure(error))
+                
                 return
             }
             
             guard let response = response as? HTTPURLResponse,
             response.statusCode == 200   else {
-                completion(.failure(NetworkError.serverError))
+                completion(.failure(URLError(.badServerResponse)))
+               
                 return
             }
             
             guard let data = data else {
-                completion(.failure(NetworkError.emptyResponse))
+                completion(.failure(URLError(.badURL)))
+               
                 return
             }
-
+           
             completion(.success(data))
-        }
+            
+        }.resume()
+        
     }
     
     
 }
+
+
+
+
